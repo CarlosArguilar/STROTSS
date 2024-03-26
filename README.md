@@ -15,7 +15,7 @@ UPDATE 5/8/2020: David Futschik (https://github.com/futscdav) very kindly pointe
 ### Unconstrained Style Transfer:
 
 ```
-python3 styleTransfer.py {PATH_TO_CONTENT} {PATH_TO_STYLE} {CONTENT_WEIGHT} {MAX_SCALES}
+python3 styleTransfer.py {PATH_TO_CONTENT} {PATH_TO_STYLE} {CONTENT_WEIGHT} {MAX_SCALES} {OUTPUT_PATH}
 ```
 
 The default content weight is 1.0 (for the images provided my personal favorite is 0.5, but generally 1.0 works well for most inputs). The content weight is actually multiplied by 16, see section 2.5 of paper for explanation. I recommend running the algorithm with MAX_SCALES set to 5.
@@ -27,7 +27,7 @@ The output will appear in the same folder as 'styleTransfer.py' and be named 'ou
 ### Spatially Guided Style Transfer:
 
 ```
-python3 styleTransfer.py {PATH_TO_CONTENT} {PATH_TO_STYLE} {CONTENT_WEIGHT} -gr {PATH_TO_CONTENT_GUIDANCE} {PATH_TO_STYLE_GUIDANCE}
+python3 styleTransfer.py {PATH_TO_CONTENT} {PATH_TO_STYLE} {CONTENT_WEIGHT} {OUTPUT_PATH} -gr {PATH_TO_CONTENT_GUIDANCE} {PATH_TO_STYLE_GUIDANCE}
 ```
 
 guidance should take the form of two masks such as these:
